@@ -1,4 +1,6 @@
 class WorkExperience < ApplicationRecord
+  has_many :responsibilities
+  
   validates :company,presence: true
 
   validates :location,presence: true
@@ -10,4 +12,6 @@ class WorkExperience < ApplicationRecord
   validates :end_date, comparison: {less_than: Date.today,allow_nil:true}
 
   validates :summary, length: {maximum: 200}
+
+  
 end
