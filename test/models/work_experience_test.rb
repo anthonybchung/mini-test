@@ -56,5 +56,10 @@ class WorkExperienceTest < ActiveSupport::TestCase
     @work_experience.end_date = " "
     assert_not @work_experience.valid?
   end
+
+  test "summary must be less than 200 characters" do 
+    @work_experience.summary = "a"*201
+    assert_not @work_experience.valid?
+  end
  
 end
