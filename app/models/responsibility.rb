@@ -1,3 +1,3 @@
 class Responsibility < ApplicationRecord
-  belongs_to :work_experiences
+  belongs_to :work_experience
 end

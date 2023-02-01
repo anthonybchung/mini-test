@@ -2,8 +2,8 @@
 
 one:
   description: MyString
-  work_experiences: one
+  work_experience: one
 
 two:
   description: MyString
-  work_experiences: two
+  work_experience: two

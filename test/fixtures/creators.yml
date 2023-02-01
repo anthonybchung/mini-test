@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  position: Ruby on Rails Developer
+  email: MyString@test.com
+
+two:
+  name: MyString2
+  position: MERN stack developer
+  email: MyString2@test.com

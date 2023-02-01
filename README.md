@@ -1,24 +1,42 @@
-# README
+# Project Vision
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The web app will assist the creator in creating a web portfolio website. The website will illustrate the following:
 
-Things you may want to cover:
+- Work Experiences
+- Side Projects
+- Blog
+- Landing Page
+- About Me
 
-* Ruby version
+Each of the above points will have its controller.
 
-* System dependencies
+## About Me
 
-* Configuration
+| ![About-Me page skill drop down closed](./ReadMe_Image/AboutMe.png)|![About-Me page skill drop down closed](./ReadMe_Image/AboutMe-Skills.png)|
+| --- | --- |
+| About Me Page with skill closed |About Me Page with drop down skill opened |
 
-* Database creation
+### About Me Page
 
-* Database initialization
+#### Creator
 
-* How to run the test suite
+- As a creator, I want to enter my **name**.
+- As a creator, I want to enter my **position**.
+- As a creator, I want to enter my **email address**.
+- As a creator, I want to **list** my **social media pages**.
+- As a creator, I want to talk about myself.
 
-* Services (job queues, cache servers, search engines, etc.)
+- As a creator, I want to **list** my **skills**.
 
-* Deployment instructions
+#### Data
 
-* ...
+An E-R diagram was derived using the above mock-up.
+
+|![About-Me Entity-Relationship Diagram](./ReadMe_Image/AboutMe-ER.png)|
+| --- |
+| About-Me Entity-Relationship Diagram |
+
+### Create Models that relate to About-Me Page.
+
+
+
