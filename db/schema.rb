@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_01_115458) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_05_203751) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "about_mes", force: :cascade do |t|
+    t.text "paragraph"
+    t.bigint "creator_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_id"], name: "index_about_mes_on_creator_id"
+  end
 
   create_table "creators", force: :cascade do |t|
     t.string "name"
@@ -50,6 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_01_115458) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "about_mes", "creators"
   add_foreign_key "responsibilities", "work_experiences"
   add_foreign_key "socials", "creators"
 end

@@ -63,3 +63,43 @@ end
 | url        | string | not null |
 | svg        | string | null     |
 | creator_id | bigint | not null |
+
+After mini-test the validation for model Social.
+
+```
+belongs_to :creator
+
+  before_validation{
+    self.url = url.strip
+  }
+
+  validate :first_word
+
+  VALID_URL_REGEX = /\Ahttps:\/\//i
+
+  validates :url,format:{with: VALID_URL_REGEX}
+
+  private
+
+  def first_word
+    if svg.split.first != "<svg"
+      errors.add(:svg,"must be and svg file")
+    end
+  end
+```
+
+#### Model: AboutMe
+
+| Attribute | Type |          |
+| --------- | ---- | -------- |
+| paragraph | text | not null |
+
+After mini-test the validation for model AboutMe
+
+```
+class AboutMe < ApplicationRecord
+  belongs_to :creator
+
+  validates :paragraph, presence: true
+end
+```

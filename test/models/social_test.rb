@@ -30,8 +30,13 @@ class SocialTest < ActiveSupport::TestCase
     assert_not @social.valid?
   end
 
-  test "attribut url must trim string" do
+  test "attribute url must trim string" do
     @social.url = " https://google.com"
     assert @social.valid?
+  end
+
+  test "creator id must be present" do
+    @social.creator_id = " "
+    assert_not @social.valid?
   end
 end

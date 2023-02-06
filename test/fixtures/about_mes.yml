@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt tincidunt sollicitudin. Curabitur pulvinar, sem eget convallis pulvinar, nisl augue aliquam diam, a facilisis nisl turpis vel mi. Ut a magna libero. Proin nec tempor justo, sit amet commodo diam. Vivamus eget sapien non libero finibus maximus. Suspendisse a congue.
+  creator: one
+
+two:
+  paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque neque diam, lobortis vulputate tellus eleifend pulvinar. Integer et velit malesuada, aliquet sem sed, efficitur eros. Fusce nec erat enim. Ut magna mauris, pulvinar ac odio at, tincidunt dictum enim. In et dolor orci. Vestibulum finibus laoreet ante vitae lobortis. Vivamus at augue varius nisi lacinia blandit in ac turpis. Etiam scelerisque nunc vel lorem efficitur eleifend.
+  creator: one
