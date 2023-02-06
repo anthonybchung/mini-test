@@ -12,9 +12,9 @@ Each of the above points will have its controller.
 
 ## About Me
 
-| ![About-Me page skill drop down closed](./ReadMe_Image/AboutMe.png)|![About-Me page skill drop down closed](./ReadMe_Image/AboutMe-Skills.png)|
-| --- | --- |
-| About Me Page with skill closed |About Me Page with drop down skill opened |
+| ![About-Me page skill drop down closed](./ReadMe_Image/AboutMe.png) | ![About-Me page skill drop down closed](./ReadMe_Image/AboutMe-Skills.png) |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| About Me Page with skill closed                                     | About Me Page with drop down skill opened                                  |
 
 ### About Me Page
 
@@ -32,9 +32,9 @@ Each of the above points will have its controller.
 
 An E-R diagram was derived using the above mock-up.
 
-|![About-Me Entity-Relationship Diagram](./ReadMe_Image/AboutMe-ER.png)|
-| --- |
-| About-Me Entity-Relationship Diagram |
+| ![About-Me Entity-Relationship Diagram](./ReadMe_Image/AboutMe-ER.png) |
+| ---------------------------------------------------------------------- |
+| About-Me Entity-Relationship Diagram                                   |
 
 ### Create Models that relate to About-Me Page.
 
@@ -55,7 +55,59 @@ class Creator < ApplicationRecord
 end
 ```
 
+#### Model: Social
 
+| Attribute  | Type   |          |
+| ---------- | ------ | -------- |
+| name       | string | not null |
+| url        | string | not null |
+| svg        | string | null     |
+| creator_id | bigint | not null |
 
+After mini-test the validation for model Social.
 
+```
+belongs_to :creator
 
+  before_validation{
+    self.url = url.strip
+  }
+
+  validate :first_word
+
+  VALID_URL_REGEX = /\Ahttps:\/\//i
+
+  validates :url,format:{with: VALID_URL_REGEX}
+
+  private
+
+  def first_word
+    if svg.split.first != "<svg"
+      errors.add(:svg,"must be and svg file")
+    end
+  end
+```
+
+#### Model: AboutMe
+
+| Attribute  | Type |          |
+| ---------- | ---- | -------- |
+| paragraph  | text | not null |
+| creator_id | int  | not null |
+
+After mini-test the validation for model AboutMe
+
+```
+class AboutMe < ApplicationRecord
+  belongs_to :creator
+
+  validates :paragraph, presence: true
+end
+```
+
+#### Model: SkillCategory
+
+| Attribute  | Type   |          |
+| ---------- | ------ | -------- |
+| name       | string | not null |
+| creator_id | int    | not_null |
