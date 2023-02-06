@@ -111,3 +111,22 @@ end
 | ---------- | ------ | -------- |
 | name       | string | not null |
 | creator_id | int    | not_null |
+
+After mini-test the validation for model SkillCategory.
+
+**N.B:** Still needs to work on it during the building of model: Skill
+
+```
+class SkillCategory < ApplicationRecord
+  belongs_to :creator
+
+  validates :name, presence: true
+end
+```
+
+#### Model: Skill
+
+| Attribute         | Type   |     |
+| ----------------- | ------ | --- |
+| description       | string |     |
+| skill_category_id | int    |     |
