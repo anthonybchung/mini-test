@@ -90,16 +90,10 @@ belongs_to :creator
 
 #### Model: AboutMe
 
-<<<<<<< HEAD
 | Attribute  | Type |          |
 | ---------- | ---- | -------- |
 | paragraph  | text | not null |
 | creator_id | int  | not null |
-=======
-| Attribute | Type |          |
-| --------- | ---- | -------- |
-| paragraph | text | not null |
->>>>>>> social
 
 After mini-test the validation for model AboutMe
 
@@ -110,7 +104,6 @@ class AboutMe < ApplicationRecord
   validates :paragraph, presence: true
 end
 ```
-<<<<<<< HEAD
 
 #### Model: SkillCategory
 
@@ -148,7 +141,7 @@ class Skill < ApplicationRecord
 end
 ```
 
-Model: SkillCategory updated.
+#### Model: SkillCategory updated.
 
 ```
 class SkillCategory < ApplicationRecord
@@ -163,5 +156,3 @@ end
 All models are created now to Controllers and Views.
 
 ### Create Views and Controllers for Creator then Readers.
-=======
->>>>>>> social
