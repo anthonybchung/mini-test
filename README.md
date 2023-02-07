@@ -152,3 +152,5 @@ class SkillCategory < ApplicationRecord
   validates :name, presence: true
 end
 ```
+
+All models are created now to Controllers and Views.
