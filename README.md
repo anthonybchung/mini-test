@@ -154,3 +154,5 @@ end
 ```
 
 All models are created now to Controllers and Views.
+
+### Create Views and Controllers for Creator then Readers.
