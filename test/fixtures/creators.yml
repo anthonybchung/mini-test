@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Anthony Chung
   position: Ruby on Rails Developer
-  email: MyString@test.com
+  email: abchung@test.com
 
 two:
-  name: MyString2
+  name: Bernie Dickens
   position: MERN stack developer
-  email: MyString2@test.com
+  email: BernieB@test.com

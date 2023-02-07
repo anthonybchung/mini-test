@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_02_07_085044) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2023_02_05_203751) do
+>>>>>>> social
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_07_085044) do
     t.index ["work_experience_id"], name: "index_responsibilities_on_work_experience_id"
   end
 
+<<<<<<< HEAD
   create_table "skill_categories", force: :cascade do |t|
     t.string "name"
     t.bigint "creator_id", null: false
@@ -54,6 +59,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_07_085044) do
     t.index ["skill_category_id"], name: "index_skills_on_skill_category_id"
   end
 
+=======
+>>>>>>> social
   create_table "socials", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -76,7 +83,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_07_085044) do
 
   add_foreign_key "about_mes", "creators"
   add_foreign_key "responsibilities", "work_experiences"
+<<<<<<< HEAD
   add_foreign_key "skill_categories", "creators"
   add_foreign_key "skills", "skill_categories"
+=======
+>>>>>>> social
   add_foreign_key "socials", "creators"
 end
