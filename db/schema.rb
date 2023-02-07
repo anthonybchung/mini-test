@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_06_205122) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_07_085044) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_205122) do
     t.index ["creator_id"], name: "index_skill_categories_on_creator_id"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string "description"
+    t.bigint "skill_category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["skill_category_id"], name: "index_skills_on_skill_category_id"
+  end
+
   create_table "socials", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -69,5 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_205122) do
   add_foreign_key "about_mes", "creators"
   add_foreign_key "responsibilities", "work_experiences"
   add_foreign_key "skill_categories", "creators"
+  add_foreign_key "skills", "skill_categories"
   add_foreign_key "socials", "creators"
 end
