@@ -130,3 +130,25 @@ end
 | ----------------- | ------ | --- |
 | description       | string |     |
 | skill_category_id | int    |     |
+
+After mini-test the validation for Skill
+
+```
+class Skill < ApplicationRecord
+  belongs_to :skill_category
+
+  validates :description, presence: true
+end
+```
+
+Model: SkillCategory updated.
+
+```
+class SkillCategory < ApplicationRecord
+  belongs_to :creator
+
+  has_many :skills, dependent: :destroy <------ added
+
+  validates :name, presence: true
+end
+```
