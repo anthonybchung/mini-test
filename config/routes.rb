@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "/work_experience/:id", to: "work_experience#show"
   get "/work_experience/:id/edit", to: "work_experience#edit"
 
-  # creator
+  # creators
   resources :creators
 end
