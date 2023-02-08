@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get "/work_experience/:id/edit", to: "work_experience#edit"
 
   # creators
-  resources :creators
+  resource :creator
 end

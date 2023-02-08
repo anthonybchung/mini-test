@@ -156,3 +156,15 @@ end
 All models are created now to Controllers and Views.
 
 ### Create Views and Controllers for Creator then Readers.
+
+Creator will belong to a user, and a User will has_a creator.
+
+```
+rails generate controller creator
+```
+
+inside routes
+
+```
+resource :creator
+```
